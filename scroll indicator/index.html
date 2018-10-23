@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>testing</title>
+</head>
+<body>
+    <div class="progress"></div>
+</body>
+</html>
+
+<script type="text/javascript">
+    var h = document.documentElement,
+        b = document.body,
+        st = "scrollTop",
+        sh = "scrollHeight",
+        progress = document.querySelector(".progress"),
+        scroll;
+
+    document.addEventListener("scroll", function () {
+        scroll = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+        progress.style.setProperty("--scroll", scroll + "%");
+    }, {
+        passive: true
+    })
+</script>
+
+<style type="text/css">
+    html {
+        height: 300%;
+    }
+
+    .progress {
+        height: 4px;
+        width: 100%;
+        background: linear-gradient(to right, green var(--scroll), transparent 0);
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+</style>
