@@ -1,0 +1,28 @@
+#assignment-instructions {
+    color: blue;
+    font-family: 'Arial';
+}
+
+code {
+    font-family: 'monospace', 'Arial';
+    color: red;
+}
+
+li:nth-child(2) code {
+    color: green;
+}
+
+body {
+    font-family: 'ubuntu';
+    color: purple;
+}
+
+li:not(:first-child) {
+    background-color: black;
+    color: white;
+}
+
+ol li {
+    background-color: black;
+    color: white;
+}
