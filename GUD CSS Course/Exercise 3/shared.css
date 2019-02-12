@@ -9,8 +9,12 @@ body {
 
 .main-header {
     width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
     background: #2ddf5c;
     padding: 8px 16px;
+    z-index: 1;
 }
 
 .main-header > div {
@@ -76,7 +80,7 @@ body {
     margin-top: 48px;
 }
 
-.main-footer-links {
+.main-footer__links {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -98,9 +102,20 @@ body {
     color: #ccc;
 }
 
+.button {
+    background: #0e4f1f;
+    color: white;
+    font: inherit;
+    border: 1.5px solid #0e4f1f;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .button:hover,
 .button:active {
-    background-color: white;
+    background: white;
     color: #0e4f1f;
 }
 
